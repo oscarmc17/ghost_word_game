@@ -11,7 +11,6 @@ def open_wordlist():
     with open("wordlist.txt", "r") as f:
         split.extend(f.read().splitlines())
 
-
 open_wordlist()
 
 
@@ -57,6 +56,5 @@ def start():
             print("Player {} loses by accumulating 3 strikes.".format(
                 2 if player1_strikes > player2_strikes else 1))
             break
-
 
 start()
