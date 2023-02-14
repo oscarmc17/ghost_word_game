@@ -3,6 +3,8 @@ import random
 
 split = []
 current_word = []
+player1_strikes = 0
+player2_strikes = 0
 
 # open_wordlist function that opens wordlist.txt, splits every word into a new list.
 def open_wordlist():
@@ -28,7 +30,7 @@ def start():
         current_word.append(player1)
 
         word = ''.join(current_word)
-        if word in split and len(word) >= 3:
+        if word in split and len(word) > 3:
             print(word)
             print('We in here')
             break
@@ -47,7 +49,7 @@ def start():
         current_word.append(player2)
 
         word = ''.join(current_word)
-        if word in split and len(word) >= 3:
+        if word in split and len(word) > 3:
             print(word)
             print('We in here')
             break
