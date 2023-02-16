@@ -7,4 +7,3 @@ player2 = "Player 2"
 def open_wordlist():
     with open("wordlist.txt", "r") as f:
         return f.read().splitlines()
-
