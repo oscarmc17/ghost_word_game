@@ -8,3 +8,5 @@ def open_wordlist():
     with open("wordlist.txt", "r") as f:
         return f.read().splitlines()
 
+
+wordlist = open_wordlist()
