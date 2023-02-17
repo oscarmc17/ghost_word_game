@@ -13,17 +13,17 @@ wordlist = open_wordlist()
 
 # randomly chooses which player goes first
 current_player = random.choice([player1, player2])
-print(current_player)
+# print(current_player)
 
-# while True:
-#     # Prompt current player to enter a letter
-#     letter = input(f"Player enter a letter: ").lower()
+while True:
+    # Prompt current player to enter a letter
+    letter = input(f"{current_player} enter a letter: ").lower()
 
-#     # letter validation for longer than 1 char or if num.
-#     if len(letter) > 1 or not letter.isalpha():
-#         print('Invalid input. Please enter a single letter.')
-#         continue
+    # letter validation for longer than 1 char or if num.
+    if len(letter) > 1 or not letter.isalpha():
+        print('Invalid input. Please enter a single letter.')
+        continue
 
-
+    
     
 
