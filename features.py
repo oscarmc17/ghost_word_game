@@ -1,13 +1,16 @@
 import random
 
-#Defining player names
+# Defining player names
 player1 = "Player 1"
 player2 = "Player 2"
 
 # .read() reads the list, splitlines() splits a string into a list where each line is a list item. Split at line breaks.
+
+
 def open_wordlist():
     with open("wordlist.txt", "r") as f:
         return f.read().splitlines()
+
 
 wordlist = open_wordlist()
 
@@ -24,6 +27,10 @@ while True:
         print('Invalid input. Please enter a single letter.')
         continue
 
-    
+    # Check if letter forms the beginning of a valid word
     
 
+    if current_player == player1:
+        current_player = player2
+    else:
+        current_player = player1
