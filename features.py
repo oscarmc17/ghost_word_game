@@ -11,12 +11,13 @@ def open_wordlist():
     with open("wordlist.txt", "r") as f:
         return f.read().splitlines()
 
-
 wordlist = open_wordlist()
 
 # randomly chooses which player goes first
 current_player = random.choice([player1, player2])
-# print(current_player)
+
+# Define the current word
+word = ""
 
 while True:
     # Prompt current player to enter a letter
@@ -28,8 +29,13 @@ while True:
         continue
 
     # Check if letter forms the beginning of a valid word
+    valid_word_found = False
+    for w in wordlist:
+        if w.startswith(word+letter):
+            valid_word_found = True
+            break
     
-
+    # Switch to current player
     if current_player == player1:
         current_player = player2
     else:
