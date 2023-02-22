@@ -13,6 +13,7 @@ def open_wordlist():
 
 wordlist = open_wordlist()
 
+
 # randomly chooses which player goes first
 current_player = random.choice([player1, player2])
 
@@ -34,7 +35,18 @@ while True:
         if w.startswith(word+letter):
             valid_word_found = True
             break
-    
+
+    # Add the letter to the current word after validations
+    word += letter
+
+    # Check if player has completed a valid word of at least 3 letters
+    if len(word) >= 3 and word in wordlist:
+        if current_player == 1:
+            print(f'{player2} wins! {player1} has spelled {word}')
+        else:
+            print(f'{player1} wins! {player2} has spelled {word}')
+        break
+
     # Switch to current player
     if current_player == player1:
         current_player = player2

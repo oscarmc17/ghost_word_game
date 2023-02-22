@@ -14,3 +14,4 @@ wordlist = open_wordlist()
 
 # Randomly choose which player starts
 current_player = random.choice([player1, player2])
+
