@@ -17,6 +17,10 @@ wordlist = open_wordlist()
 # randomly chooses which player goes first
 current_player = random.choice([player1, player2])
 
+# Strikes counter for each player
+player1_strikes = 0
+player2_strikes = 0
+
 # Define the current word
 word = ""
 
