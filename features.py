@@ -5,12 +5,9 @@ player1 = "Player 1"
 player2 = "Player 2"
 
 # .read() reads the list, splitlines() splits a string into a list where each line is a list item. Split at line breaks.
-
-
 def open_wordlist():
     with open("wordlist.txt", "r") as f:
         return f.read().splitlines()
-
 
 wordlist = open_wordlist()
 
@@ -29,7 +26,8 @@ word = ""
 round_count = 1
 game = True
 
-print(f"Round {round_count}")
+print(f"Round: {round_count}")
+
 while game:
     while True:
         # Prompt current player to enter a letter
@@ -80,10 +78,10 @@ while game:
         else:
             current_player = player1
 
-        # Increment round counter
-        round_count += 1
-
     # Prompt to play another round
     play_again = input("Play another round? (y/n): ").lower()
     if play_again == 'n':
         game = False
+    else:
+        word = ""
+        current_player = random.choice([player1, player2])
