@@ -24,8 +24,11 @@ word = ""
 
 # Define round counter
 round_count = 1
+
+# game = True so that game can be looped and set to False if user does not want to play again.
 game = True
 
+# Round:
 print(f"Round: {round_count}")
 
 while game:
@@ -85,3 +88,7 @@ while game:
     else:
         word = ""
         current_player = random.choice([player1, player2])
+        player1_strikes = 0
+        player2_strikes = 0
+        round_count += 1
+        print(f"\nRound: {round_count}")
